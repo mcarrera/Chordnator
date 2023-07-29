@@ -2,50 +2,8 @@
 <html>
 <head>
     <title>ChordNator - Chords and Forms</title>
-    <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        html {
-            font-size: 16px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            background-color: #007bff;
-            margin: 0.25rem 0 0.25rem;
-            padding: 1rem 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 0.625rem;
-            /* New styles to make the h1 narrower and centered */
-            max-width: 600px; /* Adjust the max-width as needed */
-            margin: 0 auto; /* Center the h1 horizontally */
-        }
-
-        .custom-container {
-            background-color: #f9f9f9;
-            padding: 1rem 2rem;
-            border-radius: 0.625rem;
-            margin-top: 0.5rem;
-        }
-
-        p {
-            font-size: 1.125rem;
-            margin: 0.625rem;
-        }
-
-        button {
-            font-size: 1rem;
-        }
-    </style>
+     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>ChordNator</h1>
@@ -58,21 +16,9 @@
             </div>
         </div>
     </div>
-
-    <!-- Add Bootstrap JS (jQuery is required) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        function go() {
-            var chords = ["A", "A#", "Ab", "B", "B#", "Bb", "C", "C#", "Cb", "D", "D#", "Db", "E", "E#", "Eb", "F", "Fb", "F#", "G", "G#", "Gb"];
-            var forms = ["C", "A", "G", "E", "D"];
-            var chord = chords[Math.floor(Math.random() * chords.length)];
-            var form = forms[Math.floor(Math.random() * forms.length)];
-            document.getElementById("chord").textContent = "Chord " + chord;
-            document.getElementById("form").textContent = "Form " + form;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

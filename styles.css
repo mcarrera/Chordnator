@@ -1,0 +1,39 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: #007bff;
+    margin: 0.25rem 0 0.25rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0.625rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.custom-container {
+    background-color: #f9f9f9;
+    padding: 1rem 2rem;
+    border-radius: 0.625rem;
+    margin-top: 0.5rem;
+}
+
+p {
+    font-size: 1.125rem;
+    margin: 0.625rem;
+}
+
+button {
+    font-size: 1rem;
+}
