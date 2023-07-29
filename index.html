@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Chords and Forms</title>
+      
+    </head>
+    <body>
+        <div>
+            <p id="chord">Chord </p>
+            <p id="form">Form </p>
+            <button id="go" onclick="go()">GO!</button>
+        </div>
+        <script>
+
+        </script>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script> -->
+    <script>
+        function go(){
+            var chords= ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
+            var forms = ["C", "A", "G", "E", "D"];
+            var chord = chords[Math.floor(Math.random() * chords.length)];
+            var form = forms[Math.floor(Math.random() * forms.length)];
+            document.getElementById("chord").textContent="Chord "+ chord;
+            document.getElementById("form").textContent="Form " + form;
+        }
+    </script>
+</body>
+</html>
