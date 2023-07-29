@@ -1,26 +1,74 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Chords and Forms</title>
-    </head>
-    <body>
-        <div>
-            <p id="chord">Chord </p>
-            <p id="form">Form </p>
-            <button id="go" onclick="go()">GO!</button>
-        </div>
-        <script>
+<head>
+    <title>Chords and Forms</title>
+    <style>
+          html {
+            font-size: 16px;
+        }
 
-        </script>
-    
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script> -->
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Increased font size for the h1 */
+            color: #007bff; /* Changed the color to match the button */
+            margin: 0.25rem 0 0.5rem;
+            padding: 0;
+            text-transform: uppercase; /* Uppercase the text */
+            letter-spacing: 2px; /* Add letter spacing for a bold look */
+        }
+
+        div {
+            background-color: #f9f9f9;
+            padding: 0.75rem;
+            border-radius: 0.625rem;
+            box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+            width: 18.75rem;
+            margin: 0 auto;
+            margin-top: 0.5rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin: 0.625rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.3125rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ChordNator</h1>
+    <div>
+        <p id="chord">Chord </p>
+        <p id="form">Form </p>
+        <button id="go" onclick="go()">GO!</button>
+    </div>
     <script>
-        function go(){
-            var chords= ["A", "A#", "Ab", "B", "B#", "Bb", "C", "C#", "Cb", "D", "D#", "Db", "E", "E#", "Eb", "F", "Fb", "F#", "G", "G#", "Gb"];
+        function go() {
+            var chords = ["A", "A#", "Ab", "B", "B#", "Bb", "C", "C#", "Cb", "D", "D#", "Db", "E", "E#", "Eb", "F", "Fb", "F#", "G", "G#", "Gb"];
             var forms = ["C", "A", "G", "E", "D"];
             var chord = chords[Math.floor(Math.random() * chords.length)];
             var form = forms[Math.floor(Math.random() * forms.length)];
-            document.getElementById("chord").textContent="Chord "+ chord;
-            document.getElementById("form").textContent="Form " + form;
+            document.getElementById("chord").textContent = "Chord " + chord;
+            document.getElementById("form").textContent = "Form " + form;
         }
     </script>
 </body>
