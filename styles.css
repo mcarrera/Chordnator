@@ -37,3 +37,8 @@ p {
 button {
     font-size: 1rem;
 }
+
+#mode-dropdown {
+    width: fit-content; /* Adjust width based on the content */
+    margin: 0 auto; /* Center the dropdown horizontally */
+  }
