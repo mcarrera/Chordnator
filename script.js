@@ -1,13 +1,16 @@
-function go() {
-    var chords = ["A", "A#", "Ab", "B", "B#", "Bb", "C", "C#", "Cb", "D", "D#", "Db", "E", "E#", "Eb", "F", "Fb", "F#", "G", "G#", "Gb"];
-    var shapes = ["C", "A", "G", "E", "D"];
-    var chord = chords[Math.floor(Math.random() * chords.length)];
-    var shape = shapes[Math.floor(Math.random() * shapes.length)];
-  
-    var modeDropdown = document.getElementById("mode-dropdown");
-    var selectedValue = modeDropdown.options[modeDropdown.selectedIndex].value;
+// Constants used in the page
+const chords = ["A", "A#", "Ab", "B", "B#", "Bb", "C", "C#", "Cb", "D", "D#", "Db", "E", "E#", "Eb", "F", "Fb", "F#", "G", "G#", "Gb"];
+const shapes = ["C", "A", "G", "E", "D"];
 
-    var selectedMode;
+// Function for button
+function go() {
+    const chord = chords[Math.floor(Math.random() * chords.length)];
+    const shape = shapes[Math.floor(Math.random() * shapes.length)];
+  
+    const modeDropdown = document.getElementById("mode-dropdown");
+    const selectedValue = modeDropdown.options[modeDropdown.selectedIndex].value;
+
+    let selectedMode;
 
     if (selectedValue === "major" || selectedValue === "minor") {
         selectedMode = selectedValue;
@@ -16,5 +19,15 @@ function go() {
     }
 
     document.getElementById("chord").textContent = `Chord ${chord} ${selectedMode.charAt(0).toUpperCase() + selectedMode.slice(1)}`;
-    document.getElementById("shape").textContent = "Shape " + shape;
+    document.getElementById("shape").textContent = `Shape ${shape}`;
 }
+
+// Event listener for checkbox
+document.getElementById('autoClick').addEventListener('change', function() {
+    let intervalId;
+    if (this.checked) {
+        intervalId = setInterval(go, 5000);
+    } else {
+        clearInterval(intervalId);
+    }
+});
